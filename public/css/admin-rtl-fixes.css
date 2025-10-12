@@ -1,0 +1,294 @@
+/* RTL Fixes for Admin Dashboard */
+
+/* Sidebar RTL Positioning */
+.sidebar-container {
+    right: 0;
+    left: auto;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: none;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Navigation Items RTL */
+.nav-item {
+    flex-direction: row;
+    text-align: right;
+    justify-content: flex-start;
+}
+
+.nav-icon {
+    margin-left: 12px;
+    margin-right: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.nav-text {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-indicator {
+    right: 0;
+    left: auto;
+}
+
+.sidebar-container.collapsed .nav-item {
+    justify-content: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.sidebar-container.collapsed .nav-icon {
+    margin: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.sidebar-container.collapsed .nav-icon i {
+    font-size: 18px;
+}
+
+.sidebar-container.collapsed .nav-text {
+    display: none;
+}
+
+.sidebar-container.collapsed .nav-section-title {
+    display: none;
+}
+
+.sidebar-container.collapsed .logo-text {
+    display: none;
+}
+
+.sidebar-container.collapsed .user-info {
+    display: none;
+}
+
+.sidebar-container.collapsed .sidebar-header {
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+.sidebar-container.collapsed .sidebar-footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+.sidebar-container.collapsed .user-profile {
+    justify-content: center;
+}
+
+/* Sidebar Toggle RTL */
+.sidebar-toggle {
+    left: -12px;
+    right: auto;
+    z-index: 1001;
+}
+
+.sidebar-container.collapsed .sidebar-toggle i {
+    transform: rotate(180deg);
+}
+
+.sidebar-toggle:hover {
+    background: #f8fafc;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Tooltips RTL */
+.sidebar-container.collapsed .nav-item[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+    background: #1f2937;
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar-container.collapsed .nav-item[data-tooltip]:hover::before {
+    content: '';
+    position: absolute;
+    left: calc(100% + 4px);
+    top: 50%;
+    transform: translateY(-50%);
+    border: 6px solid transparent;
+    border-left-color: #1f2937;
+    z-index: 1001;
+}
+
+/* User Profile Section RTL */
+.user-profile {
+    flex-direction: row;
+}
+
+.user-avatar {
+    order: 2;
+    margin-left: 12px;
+    margin-right: 0;
+}
+
+.user-info {
+    order: 1;
+    text-align: right;
+}
+
+/* Main Content Margin */
+.main-content {
+    margin-right: 280px;
+    margin-left: 0;
+    transition: margin 0.3s ease;
+}
+
+.sidebar-container.collapsed ~ .main-content {
+    margin-right: 80px;
+}
+
+/* Mobile RTL */
+@media (max-width: 768px) {
+    .sidebar-container {
+        transform: translateX(100%);
+        right: 0;
+        z-index: 1050;
+    }
+    
+    .sidebar-container.mobile-open {
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+    
+    .mobile-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1040;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .mobile-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* Mobile Menu Toggle */
+#mobile-menu-toggle {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    #mobile-menu-toggle {
+        display: none;
+    }
+}
+
+/* Form Elements RTL */
+.form-input {
+    text-align: right;
+}
+
+.form-input:focus {
+    text-align: right;
+}
+
+/* Button Icons RTL */
+.btn i {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+/* Table RTL */
+.table-content th,
+.table-content td {
+    text-align: right;
+}
+
+/* Cards RTL */
+.dashboard-card {
+    text-align: right;
+}
+
+/* Dropdown RTL */
+.user-dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+.dropdown-item {
+    text-align: right;
+    flex-direction: row;
+}
+
+.dropdown-item i {
+    margin-left: 0.75rem;
+    margin-right: 0;
+    order: 2;
+}
+
+.dropdown-item span {
+    order: 1;
+}
+
+/* Search Input RTL */
+.search-input {
+    text-align: right;
+    padding-right: 2.5rem;
+    padding-left: 1rem;
+}
+
+.search-icon {
+    right: 0.75rem;
+    left: auto;
+}
+
+/* Notification Badge RTL */
+.notification-badge {
+    right: -0.25rem;
+    left: auto;
+}
+
+/* Quick Actions RTL */
+.quick-action-btn {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+/* Animation Fixes */
+.nav-item:hover {
+    transform: translateX(-4px);
+}
+
+.mobile-nav-link:hover {
+    transform: translateX(-8px);
+}
+
+.footer-link:hover {
+    transform: translateX(-4px);
+}
+
+.dropdown-item:hover {
+    transform: translateX(-4px);
+}
