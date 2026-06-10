@@ -334,10 +334,9 @@ Connect With Me
 
 GitHub: https://github.com/hashedalgradi
 
-LinkedIn: Add Your LinkedIn Profile
+LinkedIn: https://www.linkedin.com/in/hashed-saad-577a812b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
 
-Portfolio: Add Your Portfolio Website
-
+Portfolio: https://hashedalgradi.infinityfree.io/
 
 
 ---
