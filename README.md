@@ -350,7 +350,9 @@ LinkedIn: https://www.linkedin.com/in/hashed-saad-577a812b8?utm_source=share&utm
 
 Portfolio: https://hashedalgradi.infinityfree.io/
 
+UXperience represents one of my early full-stack web development projects. Through this project, I gained practical experience in Laravel development, database design, content management systems, responsive interfaces, and administration dashboard development.
 
+My current work extends beyond this project and includes Flutter mobile applications, Laravel backend systems, Clean Architecture, Riverpod state management, UI/UX design, and educational and e-commerce platforms.
 ---
 
 📄 License
